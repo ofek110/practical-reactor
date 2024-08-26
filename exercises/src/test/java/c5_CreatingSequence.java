@@ -206,9 +206,7 @@ public class c5_CreatingSequence {
      */
     @Test
     public void interval() throws InterruptedException {
-        Flux<Long> interval = Flux
-            .interval(Duration.ofSeconds(1))
-            .scan((result, number) -> result + 1); //todo: change this line only
+        Flux<Long> interval = Flux.interval(Duration.ofSeconds(1));
 
         System.out.println("Interval: ");
         StepVerifier.create(interval.take(3).doOnNext(System.out::println))
