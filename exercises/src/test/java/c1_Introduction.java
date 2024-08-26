@@ -159,9 +159,6 @@ public class c1_Introduction extends IntroductionBase {
             error -> {},
             () -> serviceCallCompleted.set(true)
         );
-        //todo: change this line only
-        ;
-
         Thread.sleep(1000);
 
         assertTrue(serviceCallCompleted.get());
